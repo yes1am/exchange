@@ -1,0 +1,9 @@
+{
+  "verbose": true,
+  "ignore": [
+    "app/views"
+  ],
+  "execMap": {
+    "js": "node"
+  }
+}

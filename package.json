@@ -1,0 +1,71 @@
+{
+  "name": "exchange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "nodemon ./app/server/server.js && webpack --mode development --config ./webpack/webpack.dev.js",
+    "build": "rm -rf dist && webpack --mode production --config ./webpack/webpack.pro.js",
+    "lint": "standard \"./app/**/*.js\"",
+    "fix": "standard \"./app/**/*.js\" --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yes1am/exchange.git"
+  },
+  "standard": {
+    "ignore": [
+      "app/views/static"
+    ],
+    "include": [
+      "webpack"
+    ],
+    "parser": "babel-eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yes1am/exchange/issues"
+  },
+  "homepage": "https://github.com/yes1am/exchange#readme",
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "7.4.4",
+    "@babel/preset-react": "7.0.0",
+    "antd": "^4.8.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "8.0.6",
+    "babel-plugin-import": "1.11.0",
+    "css-loader": "2.1.1",
+    "file-loader": "3.0.1",
+    "less": "3.9.0",
+    "less-loader": "5.0.0",
+    "nodemon": "1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "16.8.6",
+    "source-map-loader": "^0.2.4",
+    "standard": "12.0.1",
+    "style-loader": "0.23.1",
+    "url-loader": "1.1.2",
+    "webpack": "4.31.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "3.3.2",
+    "webpack-dev-middleware": "3.7.0",
+    "webpack-hot-middleware": "2.25.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "ahooks": "^2.9.3",
+    "antd-mobile": "^2.3.4",
+    "express": "4.16.4",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
+    "selfsigned": "^2.0.0",
+    "svg-inline-loader": "^0.8.2"
+  }
+}
